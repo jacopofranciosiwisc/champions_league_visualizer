@@ -1,0 +1,31 @@
+<h1>Hello world</h1>
+
+{% for table in group_tables %}
+<table>
+    <tr>
+        <th>Team</th>
+        <th>PTS</th>
+        <th>GP</th>
+        <th>W</th>
+        <th>L</th>
+        <th>D</th>
+        <th>GF</th>
+        <th>GA</th>
+        <th>GD</th>
+    </tr>
+    {% for index, row in table.iterrows() %}
+    <tr>
+        <td>{{row["Team"]}}</td>
+        <td>{{row["PTS"]}}</td>
+        <td>{{row["GP"]}}</td>
+        <td>{{row["W"]}}</td>
+        <td>{{row["L"]}}</td>
+        <td>{{row["D"]}}</td>
+        <td>{{row["GF"]}}</td>
+        <td>{{row["GA"]}}</td>
+        <td>{{row["GD"]}}</td>
+    </tr>
+    
+    {% endfor %}
+</table>
+{% endfor %}
