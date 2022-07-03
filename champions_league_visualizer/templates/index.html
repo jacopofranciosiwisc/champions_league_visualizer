@@ -1,3 +1,4 @@
+
 <h1>Champions League  Group Stage</h1>
 <div class="grid-container">
     
@@ -8,7 +9,7 @@
                 <table>
                     <tr>
 
-                        <th><h3>{{groups[(index/4) - 1]}}</h3></th>
+                        <th>Place</th>
                         <th>Team</th>
                         <th>PTS</th>
                         <th>GP</th>
@@ -23,7 +24,7 @@
             
                 <tr>
                     <td>{{row["Place"]}}</td>
-                    <td>{{row["Team"]}}</td>
+                    <td>{{index}}</td>
                     <td>{{row["PTS"]}}</td>
                     <td>{{row["GP"]}}</td>
                     <td>{{row["W"]}}</td>
@@ -60,5 +61,9 @@
 
     table, th, td {
         border: 1px solid;
+    }
+
+    h1{
+        text-align: center;
     }
     </style>
