@@ -1,38 +1,45 @@
 <h1>Champions League  Group Stage</h1>
 <div class="grid-container">
-
-{% for table in group_tables %}
-    <div>
-        <table>
-            <tr>
-                <th>Team</th>
-                <th>PTS</th>
-                <th>GP</th>
-                <th>W</th>
-                <th>L</th>
-                <th>D</th>
-                <th>GF</th>
-                <th>GA</th>
-                <th>GD</th>
-            </tr>
-            {% for index, row in table.iterrows() %}
-            <tr>
-                <td>{{row["Team"]}}</td>
-                <td>{{row["PTS"]}}</td>
-                <td>{{row["GP"]}}</td>
-                <td>{{row["W"]}}</td>
-                <td>{{row["L"]}}</td>
-                <td>{{row["D"]}}</td>
-                <td>{{row["GF"]}}</td>
-                <td>{{row["GA"]}}</td>
-                <td>{{row["GD"]}}</td>
-            </tr>
-            
-            {% endfor %}
-        </table>
     
-    </div>
-{% endfor %}
+    
+        {% for index, row in table.iterrows() %}
+        <div>
+            {% if (index)%4 == 0 %}
+                <table>
+                    <tr>
+
+                        <th><h3>{{groups[(index/4) - 1]}}</h3></th>
+                        <th>Team</th>
+                        <th>PTS</th>
+                        <th>GP</th>
+                        <th>W</th>
+                        <th>L</th>
+                        <th>D</th>
+                        <th>GF</th>
+                        <th>GA</th>
+                        <th>GD</th>
+                    </tr>
+            {% endif %}
+            
+                <tr>
+                    <td>{{row["Place"]}}</td>
+                    <td>{{row["Team"]}}</td>
+                    <td>{{row["PTS"]}}</td>
+                    <td>{{row["GP"]}}</td>
+                    <td>{{row["W"]}}</td>
+                    <td>{{row["L"]}}</td>
+                    <td>{{row["D"]}}</td>
+                    <td>{{row["GF"]}}</td>
+                    <td>{{row["GA"]}}</td>
+                    <td>{{row["GD"]}}</td>
+                </tr>
+            {% if (index)%4 == 3 %}
+            </table>
+            <br>
+            {% endif %}
+        </div>
+        {% endfor %}
+    
 
     
 </div>
