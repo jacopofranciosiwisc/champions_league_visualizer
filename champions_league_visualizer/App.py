@@ -8,19 +8,23 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    url = 'https://www.sportingnews.com/us/soccer/news/uefa-champions-league-group-standings-results-match-schedule/z7rxlzuxzlb01kl1ilcra9fz7'
+    df = pd.read_csv(
+        'data\groupStage2022.csv', header=0)
+    df = df.rename(columns={'Unnamed: 0': 'Place'})
+    df['Place'] = df['Place'] + 1
 
-    page = requests.get(url)
+    # Cleaning the team column of dataframe
+    all_teams = df['Team'].to_list()
+    new_teams = []
+    for team in all_teams:
+        team = team[2:]
+        if "(X)" in team:
+            team = team[:-4]
+        new_teams.append(team)
+    df['Team'] = new_teams
 
-    soup = bs(page.content, 'html.parser')
-
-    tables = soup.findAll("table", {"class": "table-retro-standard"})
-
-    all_tables = []
-    for table in tables:
-        all_tables.append(pd.read_html(str(table))[0])
-
-    return render_template('index.html', group_tables=all_tables)
+    groups = "ABCDEFGH"
+    return render_template('index.html', table=df, groups=groups)
 
 
 if __name__ == "__main__":
