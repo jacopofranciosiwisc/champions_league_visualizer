@@ -1,5 +1,6 @@
-
-<h1>Champions League  Group Stage</h1>
+<h1>Champions League Visualizer</h1>
+<br>
+<h2>Group Stage</h2>
 <div class="grid-container">
     
     
@@ -24,7 +25,8 @@
             
                 <tr>
                     <td>{{row["Place"]}}</td>
-                    <td>{{index}}</td>
+                    <td>{{row["Team"].decode("utf8", "ignore")}}</td>
+                    
                     <td>{{row["PTS"]}}</td>
                     <td>{{row["GP"]}}</td>
                     <td>{{row["W"]}}</td>
@@ -40,9 +42,10 @@
             {% endif %}
         </div>
         {% endfor %}
-    
+</div>
 
-    
+<div>
+    <h2>Knockout Stage</h2>
 </div>
 
 <style>
@@ -63,7 +66,7 @@
         border: 1px solid;
     }
 
-    h1{
+    h1, h2{
         text-align: center;
     }
     </style>
