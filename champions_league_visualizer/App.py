@@ -22,9 +22,8 @@ def index():
             team = team[:-4]
         new_teams.append(team)
     df['Team'] = new_teams
-
-    groups = "ABCDEFGH"
-    return render_template('index.html', table=df, groups=groups)
+    
+    return render_template('index.html', table=df, group_teams=new_teams)
 
 
 if __name__ == "__main__":
