@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     df = pd.read_csv(
-        'data\groupStage2022.csv', header=0)
+        'champions_league_visualizer\data\groupStage2022.csv', header=0)
     df = df.rename(columns={'Unnamed: 0': 'Place'})
     df['Place'] = df['Place'] + 1
 
@@ -22,7 +22,7 @@ def index():
             team = team[:-4]
         new_teams.append(team)
     df['Team'] = new_teams
-    
+
     return render_template('index.html', table=df, group_teams=new_teams)
 
 
