@@ -5,8 +5,12 @@ import pandas as pd
 
 app = Flask(__name__)
 
-
 @app.route('/')
+def home():
+    return "Welcome to the Champions League Visualizer!"
+
+
+@app.route('/2022')
 def index():
     df = pd.read_csv(
         'champions_league_visualizer\data\groupStage2022.csv', header=0)
