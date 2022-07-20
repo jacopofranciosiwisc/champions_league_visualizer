@@ -9,95 +9,48 @@
         <div class="item">
             <h3>Round of 16</h3>
             <br>
-            <div class="box">
-                <br>
-                Benfica
-                <br>
-                Ajax
-                <br>
-            </div>
-            <div class="box">
-                <br>
-                Inter Milan
-                <br>
-                Liverpool
-                <br>
-            </div>
-            <div class="box">
-                <br>
-                Villarreal
-                <br>
-                Juventus
-                <br>
-            </div>
-            <div class="box">
-                <br>
-                Salzburg
-                <br>
-                Bayern Munich
-                <br>
-            </div>
-            <div class="box">
-                <br>
-                Sporting CP
-                <br>
-                Manchester City
-                <br>
-            </div>
-            <div class="box">
-                <br>
-                Atletico Madrid
-                <br>
-                Manchester United
-                <br>
-            </div>
-            <div class="box">
-                <br>
-                Chelsea
-                <br>
-                Lille
-                <br>
-            </div>
-            <div class="box">
-                <br>
-                PSG
-                <br>
-                Real Madrid
-                <br>
-            </div>
+            {% for i in range(8) %}
+                <div class="box">
+                    <br>
+                    {{knockout.iloc[i]['Tm1']}}
+                    <br>
+                    {{knockout.iloc[i][' Tm2']}}
+                    <br>
+                </div>
+            {% endfor %}
         </div>
         <div class="item">
             <h3>Quarter Finals</h3>
             <br><br><br><br><br>
             <div class="box">
                 <br>
-                Benfica
+                {{knockout.iloc[8]['Tm1']}}
                 <br>
-                Liverpool
-                <br>
-            </div>
-            <br><br><br><br><br><br><br>
-            <div class="box">
-                <br>
-                Villarreal
-                <br>
-                Bayern Munich
+                {{knockout.iloc[8][' Tm2']}}
                 <br>
             </div>
             <br><br><br><br><br><br><br>
             <div class="box">
                 <br>
-                Manchester City
+                {{knockout.iloc[9]['Tm1']}}
                 <br>
-                Atletico Madrid
+                {{knockout.iloc[9][' Tm2']}}
+                <br>
+            </div>
+            <br><br><br><br><br><br><br>
+            <div class="box">
+                <br>
+                {{knockout.iloc[10]['Tm1']}}
+                <br>
+                {{knockout.iloc[10][' Tm2']}}
                 <br>
             </div>
             <br><br><br><br><br><br><br><br><br>
             <div class="box">
                 <br>
-                Chelsea
+                {{knockout.iloc[11]['Tm1']}}
                 <br>
-                Real Madrid
+                {{knockout.iloc[11][' Tm2']}}
                 <br>
             </div>
         </div>
@@ -106,17 +59,17 @@
             <br><br><br><br><br><br><br><br><br><br><br><br><br>
             <div class="box">
                 <br>
-                Liverpool
+                {{knockout.iloc[12]['Tm1']}}
                 <br>
-                Villarreal
+                {{knockout.iloc[12][' Tm2']}}
                 <br>
             </div>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             <div class="box">
                 <br>
-                Manchester City
+                {{knockout.iloc[13]['Tm1']}}
                 <br>
-                Real Madrid
+                {{knockout.iloc[13][' Tm2']}}
                 <br>
             </div>
         </div>
@@ -125,9 +78,9 @@
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             <div class="box">
                 <br>
-                Liverpool
+                {{knockout.iloc[14]['Tm1']}}
                 <br>
-                Real Madrid
+                {{knockout.iloc[14][' Tm2']}}
                 <br>
             </div>
         </div>
