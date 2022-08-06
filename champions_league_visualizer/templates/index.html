@@ -38,61 +38,61 @@
         </div>
         <div class="item">
             <h3>Quarter Finals</h3>
-            <br><br><br><br><br><br>
+            {% for i in range(8, 12) %}
             <div class="box">
-                <br>
-                {{knockout.iloc[8]['Tm1']}}
-                <br>
-                {{knockout.iloc[8][' Tm2']}}
-                <br>
+                <table>
+                    <tr>
+                        <th>Team</th>
+                        <th>1st leg</th>
+                        <th>2nd leg</th>
+                        <th>Agg</th>
+                    </tr>
+                    <tr>
+                        <td>{{knockout.iloc[i]['Tm1']}}</td>
+                        <td>{{knockout.iloc[i][' Gm1Tm1']}}</td>
+                        <td>{{knockout.iloc[i][' Gm1Tm2']}}</td>
+                        <td>{{knockout.iloc[i]['total_Tm1']}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{knockout.iloc[i][' Tm2']}}</td>
+                        <td>{{knockout.iloc[i][' Gm1Tm2']}}</td>
+                        <td>{{knockout.iloc[i][' Gm2Tm2']}}</td>
+                        <td>{{knockout.iloc[i]['total_Tm2']}}</td>
+                    </tr>
+                </table>
             </div>
-            <br><br><br><br><br><br><br><br><br><br>
-            <div class="box">
-                <br>
-                {{knockout.iloc[9]['Tm1']}}
-                <br>
-                {{knockout.iloc[9][' Tm2']}}
-                <br>
-            </div>
-            <br><br><br><br><br><br><br><br><br><br>
-            <div class="box">
-                <br>
-                {{knockout.iloc[10]['Tm1']}}
-                <br>
-                {{knockout.iloc[10][' Tm2']}}
-                <br>
-            </div>
-            <br><br><br><br><br><br><br><br><br><br>
-            <div class="box">
-                <br>
-                {{knockout.iloc[11]['Tm1']}}
-                <br>
-                {{knockout.iloc[11][' Tm2']}}
-                <br>
-            </div>
+            {% endfor %}
+            
         </div>
         <div class="item">
             <h3>Semi Finals</h3>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br>
+            {% for i in range(12, 14) %}
             <div class="box">
-                <br>
-                {{knockout.iloc[12]['Tm1']}}
-                <br>
-                {{knockout.iloc[12][' Tm2']}}
-                <br>
+                <table>
+                    <tr>
+                        <th>Team</th>
+                        <th>1st leg</th>
+                        <th>2nd leg</th>
+                        <th>Agg</th>
+                    </tr>
+                    <tr>
+                        <td>{{knockout.iloc[i]['Tm1']}}</td>
+                        <td>{{knockout.iloc[i][' Gm1Tm1']}}</td>
+                        <td>{{knockout.iloc[i][' Gm1Tm2']}}</td>
+                        <td>{{knockout.iloc[i]['total_Tm1']}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{knockout.iloc[i][' Tm2']}}</td>
+                        <td>{{knockout.iloc[i][' Gm1Tm2']}}</td>
+                        <td>{{knockout.iloc[i][' Gm2Tm2']}}</td>
+                        <td>{{knockout.iloc[i]['total_Tm2']}}</td>
+                    </tr>
+                </table>
             </div>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <div class="box">
-                <br>
-                {{knockout.iloc[13]['Tm1']}}
-                <br>
-                {{knockout.iloc[13][' Tm2']}}
-                <br>
-            </div>
+            {% endfor %}
         </div>
         <div class="item">
             <h3>Finals</h3>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             <div class="box">
                 <table>
                     <tr>
@@ -107,10 +107,7 @@
                         <td>{{knockout.iloc[14][' Tm2']}}</td>
                         <td>{{knockout.iloc[14][' Gm1Tm2']}}</td>
                     </tr>
-                    
-                    
                 </table>
-                <br>
             </div>
         </div>
       </div>
