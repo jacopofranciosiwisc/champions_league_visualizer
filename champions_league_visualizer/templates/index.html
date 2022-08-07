@@ -1,11 +1,15 @@
 
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+</head>
+
 <h1>Champions League Visualizer 2021-22</h1>
 
 <br>
 
 <div>
-    <h2>Knockout Stage</h2>
-    <div class="container">
+    <button id="knockoutStageButton">Knockout Stage</button>
+    <div class="container" id="knockoutStageDiv">
         <div class="item">
             <h3>Round of 16</h3>
             <br>
@@ -114,8 +118,8 @@
 </div>
 
 <br>
-<h2>Group Stage</h2>
-<div class="grid-container">
+<button id="groupStageButton">Group Stage</button>
+<div class="grid-container" id="groupStageDiv">
     
     
         {% for index, row in table.iterrows() %}
@@ -203,4 +207,16 @@
     
 </style>
 
-  
+
+<script>
+    $('#knockoutStageButton').click(function(){
+        $('#knockoutStageDiv').toggle();
+    });
+   
+    
+    
+    $('#groupStageButton').click(function(){
+        $('#groupStageDiv').toggle();
+    });
+   
+</script>
