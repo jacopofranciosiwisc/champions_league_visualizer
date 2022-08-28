@@ -1,55 +1,14 @@
+<!DOCTYPE html>
+<html>
 <head>
-    <link rel = "stylesheet" href="../static/css/style.css"/>
-
+ <title>Champions League Visualizer</title>
+ <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+ <link rel = "stylesheet" href="../static/css/style.css"/>
 </head>
-
-<h1>Champions League Visualizer</h1>
-<br>
-<h2>Group Stage</h2>
-<div class="grid-container">
-    
-    
-        {% for index, row in table.iterrows() %}
-        <div>
-            {% if (index)%4 == 0 %}
-                <table class = "table1">
-                    <tr>
-
-                        <th>#</th>
-                        <th>Team</th>
-                        <th>PTS</th>
-                        <th>GP</th>
-                        <th>W</th>
-                        <th>L</th>
-                        <th>D</th>
-                        <th>GF</th>
-                        <th>GA</th>
-                        <th>GD</th>
-                    </tr>
-            {% endif %}
-            
-                <tr>
-                    <td>{{row["Place"]}}</td>
-                    <td>{{row["Team"]}}</td>
-                    
-                    <td>{{row["PTS"]}}</td>
-                    <td>{{row["GP"]}}</td>
-                    <td>{{row["W"]}}</td>
-                    <td>{{row["L"]}}</td>
-                    <td>{{row["D"]}}</td>
-                    <td>{{row["GF"]}}</td>
-                    <td>{{row["GA"]}}</td>
-                    <td>{{row["GD"]}}</td>
-                </tr>
-            {% if (index)%4 == 3 %}
-            </table>
-            <br>
-            {% endif %}
-        </div>
-        {% endfor %}
-</div>
-
-<div>
-    <h2>Knockout Stage</h2>
-    <img src="{{user_image}}" alt="User Image" width = "90%;">
-</div>
+<body>
+<h1>Welcome to the Champions League Visualizer!</h1>
+<h3><i>By: Arnie and Jac</i></h3><br><br>
+<h2>2022 Season</h2>
+<p align="center"><a href=2022 ><button class=grey style="height:75px;width:150px">Click me!</button></a></p>
+</body>
+</html>
