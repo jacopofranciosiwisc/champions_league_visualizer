@@ -1,3 +1,7 @@
+<head>
+    <link rel = "stylesheet" href="../static/css/style.css"/>
+
+</head>
 
 <h1>Champions League Visualizer</h1>
 <br>
@@ -8,7 +12,7 @@
         {% for index, row in table.iterrows() %}
         <div>
             {% if (index)%4 == 0 %}
-                <table>
+                <table class = "table1">
                     <tr>
 
                         <th>#</th>
@@ -47,40 +51,5 @@
 
 <div>
     <h2>Knockout Stage</h2>
-    <img src="{{user_image}}" alt=""User Image">
+    <img src="{{user_image}}" alt="User Image" width = "90%;">
 </div>
-
-<style>
-    .grid-container {
-      display: grid;
-      grid-template-columns: auto auto auto auto;
-      gap: 10px;
-      padding: 10px;
-    }
-    
-    .grid-container > div {
-      background-color: rgba(255, 255, 255, 0.8);
-      text-align: center;
-      font-size: 30px;
-    }
-
-    table, th, td {
-        border: 1px solid;
-    }
-
-    h1, h2{
-        text-align: center;
-    }
-
-    .container {
-  display: flex;
-    }
-    .item {
-    background: #ce8888;
-    flex-basis: 25%;
-    height: 100px;
-    margin: 5px;
-    }
-</style>
-
-  

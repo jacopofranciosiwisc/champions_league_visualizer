@@ -4,15 +4,14 @@ from bs4 import BeautifulSoup as bs
 import pandas as pd
 import os
 
-DATA_FOLDER = os.path.join('data', 'tourney-template')
+IMG_FOLDER = os.path.join('static', 'images')
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = DATA_FOLDER
+app.config['UPLOAD_FOLDER'] = IMG_FOLDER
 
 @app.route('/')
 def home():
-    return "Welcome to the Champions League Visualizer!"
-
+    return "Welcome to the Champions League Visualizer"
 
 
 @app.route('/2022')
