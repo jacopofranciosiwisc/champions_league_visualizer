@@ -20,7 +20,8 @@ def yr2022():
     tournament_template = os.path.join(
         app.config['UPLOAD_FOLDER'], 'tournament-template.jpg')
 
-    df = pd.read_csv('data\groupStage2022.csv', header=0)
+    df = pd.read_csv(
+        'data\groupStage2022.csv', header=0)
     df = df.rename(columns={'Unnamed: 0': 'Place'})
     df['Place'] = df['Place'] + 1
 
