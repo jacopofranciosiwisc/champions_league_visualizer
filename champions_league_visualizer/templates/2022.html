@@ -1,0 +1,58 @@
+<head>
+    <link rel = "stylesheet" href="../static/css/style.css"/>
+
+</head>
+
+<h1>Champions League Visualizer</h1>
+<br>
+<h2>Group Stage</h2>
+<div class="grid-container">
+    
+    
+        {% for index, row in table.iterrows() %}
+        <div>
+            {% if (index)%4 == 0 %}
+                <table class = "table1">
+                    <tr>
+
+                        <th>#</th>
+                        <th>Team</th>
+                        <th>PTS</th>
+                        <th>GP</th>
+                        <th>W</th>
+                        <th>L</th>
+                        <th>D</th>
+                        <th>GF</th>
+                        <th>GA</th>
+                        <th>GD</th>
+                    </tr>
+            {% endif %}
+            
+                <tr>
+                    <td>{{row["Place"]}}</td>
+                    <td>{{row["Team"]}}</td>
+                    
+                    <td>{{row["PTS"]}}</td>
+                    <td>{{row["GP"]}}</td>
+                    <td>{{row["W"]}}</td>
+                    <td>{{row["L"]}}</td>
+                    <td>{{row["D"]}}</td>
+                    <td>{{row["GF"]}}</td>
+                    <td>{{row["GA"]}}</td>
+                    <td>{{row["GD"]}}</td>
+                </tr>
+            {% if (index)%4 == 3 %}
+            </table>
+            {% endif %}
+        </div>
+        {% endfor %}
+</div>
+
+<div>
+    <h2>Knockout Stage</h2>
+    <img src="{{user_image}}" alt="User Image" id="bracket" >
+</div>
+
+<div>
+    <
+</div>
