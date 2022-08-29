@@ -40,6 +40,10 @@ h1, h2, h3 {
   margin-right: auto;
 }
 
+.r16 {
+  color: black;
+}
+
 html {
   background: url("https://c.pxhere.com/photos/30/c4/fc_barcelona_atletico_madrid_champions_league_camp_nou_football_estadio-809939.jpg!d") no-repeat center fixed;
   background-size: cover;
