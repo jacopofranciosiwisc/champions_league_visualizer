@@ -1,0 +1,50 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr auto;
+  gap: 10px;
+  padding: 10px;
+}
+  
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-size: 30px;
+  }
+
+.table1, td, th{
+  border: 1px solid;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  color: cadetblue;
+}
+
+.container {
+  display: flex;
+}
+
+.item {
+  background: #ce8888;
+  flex-basis: 25%;
+  height: 100px;
+  margin: 5px;
+}
+
+#bracket {
+  width: 60%;
+  height: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.r16 {
+  color: black;
+}
+
+html {
+  background: url("https://c.pxhere.com/photos/30/c4/fc_barcelona_atletico_madrid_champions_league_camp_nou_football_estadio-809939.jpg!d") no-repeat center fixed;
+  background-size: cover;
+}
