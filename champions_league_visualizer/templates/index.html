@@ -1,95 +1,14 @@
-
-<h1>Champions League Visualizer</h1>
-<br>
-<h2>Group Stage</h2>
-<div class="grid-container">
-    
-    
-        {% for index, row in table.iterrows() %}
-        <div>
-            {% if (index)%4 == 0 %}
-                <table>
-                    <tr>
-
-                        <th>#</th>
-                        <th>Team</th>
-                        <th>PTS</th>
-                        <th>GP</th>
-                        <th>W</th>
-                        <th>L</th>
-                        <th>D</th>
-                        <th>GF</th>
-                        <th>GA</th>
-                        <th>GD</th>
-                    </tr>
-            {% endif %}
-            
-                <tr>
-                    <td>{{row["Place"]}}</td>
-                    <td>{{row["Team"]}}</td>
-                    
-                    <td>{{row["PTS"]}}</td>
-                    <td>{{row["GP"]}}</td>
-                    <td>{{row["W"]}}</td>
-                    <td>{{row["L"]}}</td>
-                    <td>{{row["D"]}}</td>
-                    <td>{{row["GF"]}}</td>
-                    <td>{{row["GA"]}}</td>
-                    <td>{{row["GD"]}}</td>
-                </tr>
-            {% if (index)%4 == 3 %}
-            </table>
-            <br>
-            {% endif %}
-        </div>
-        {% endfor %}
-</div>
-
-<div>
-    <h2>Knockout Stage</h2>
-    <div class="container">
-        <div class="item">
-        </div>
-        <div class="item">
-        </div>
-        <div class="item">
-        </div>
-        <div class="item">
-        </div>
-      </div>
-</div>
-
-<style>
-    .grid-container {
-      display: grid;
-      grid-template-columns: auto auto auto auto;
-      gap: 10px;
-      padding: 10px;
-    }
-    
-    .grid-container > div {
-      background-color: rgba(255, 255, 255, 0.8);
-      text-align: center;
-      font-size: 30px;
-    }
-
-    table, th, td {
-        border: 1px solid;
-    }
-
-    h1, h2{
-        text-align: center;
-    }
-
-    .container {
-  display: flex;
-    }
-    .item {
-    background: #ce8888;
-    flex-basis: 25%;
-    height: 100px;
-    margin: 5px;
-    }
-</style>
-
-  
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Champions League Visualizer</title>
+ <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+ <link rel = "stylesheet" href="../static/css/style.css"/>
+</head>
+<body>
+<h1>Welcome to the Champions League Visualizer!</h1>
+<h3><i>By: Arnie and Jac</i></h3><br><br>
+<h2>2022 Season</h2>
+<p align="center"><a href=2022 ><button class=grey style="height:75px;width:150px">Click me!</button></a></p>
+</body>
+</html>
